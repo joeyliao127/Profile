@@ -1,0 +1,393 @@
+@font-face {
+  font-family: Noto;
+  src: url(/font/NotoSansTC-Regular.otf);
+}
+@font-face {
+  font-family: Space;
+  src: url(/font/SpaceGrotesk-VariableFont_wght.ttf);
+}
+* {
+  font-family: Noto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap-gray,
+.wrap-white {
+  width: calc(100vw - 15px);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrap-gray {
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 70px;
+    font-weight: 400;
+    color: #1b599b;
+  }
+  h1 {
+    font-size: 60px;
+    font-family: Space;
+    font-weight: 500;
+  }
+  p {
+    font-size: 18px;
+  }
+  .container {
+    width: 80vw;
+    box-sizing: border-box;
+    padding: 5%;
+    position: relative;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 6vw;
+    font-weight: 400;
+    color: #1b599b;
+  }
+  h1 {
+    vertical-align: baseline;
+    font-size: 4.5vw;
+    font-family: Space;
+    font-weight: 500;
+  }
+  .container {
+    max-width: 80vw;
+    box-sizing: border-box;
+    padding: 5%;
+    margin: auto;
+  }
+}
+.header-wrap {
+  background-color: #f0f0f0;
+}
+
+section.header {
+  display: flex;
+  padding: 30px 50px 0;
+}
+section.header .profileBar {
+  width: 50%;
+}
+section.header .profileBar p {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+section.header .profileBar nav.introBar {
+  display: flex;
+  justify-content: end;
+}
+section.header .profileBar nav.introBar a {
+  font-size: 1.3rem;
+  margin-inline: 10px;
+  vertical-align: bottom;
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+section.header .profileBar nav.introBar a::after {
+  content: "";
+  position: absolute;
+  background-color: #1b599b;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+}
+section.header .profileBar nav.introBar a:hover {
+  color: #1b599b;
+  transition: all 0.3s ease-in-out;
+}
+section.header .profileBar nav.introBar a:hover:after {
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out;
+}
+
+main section.firstPage {
+  display: flex;
+  justify-content: center;
+  padding-block: 15vh;
+}
+main section.firstPage div.firstPage-PIC {
+  width: 50%;
+  margin-right: 10%;
+}
+main section.firstPage div.firstPage-PIC img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 2/2.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+main section.firstPage div.firstPage-title {
+  width: 40%;
+  align-self: center;
+  text-align: center;
+}
+main section.firstPage div.firstPage-title h1 {
+  padding-bottom: 10px;
+  color: #1b599b;
+}
+main section.firstPage div.firstPage-title p {
+  font-size: 1em;
+  color: #1b599b;
+  margin-bottom: 20px;
+}
+main section.firstPage div.firstPage-title p span {
+  color: #9c6c1a;
+  font-weight: 500;
+}
+main section.firstPage div.firstPage-title a {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #1b599b;
+  border: 2px solid #1b599b;
+  box-sizing: border-box;
+  padding: 5px 40px;
+}
+main section.firstPage div.firstPage-title a:hover {
+  color: white;
+  background-color: #1b599b;
+  transition: all 0.5s;
+}
+main section.aboutMe {
+  display: flex;
+  justify-content: center;
+  display: flex;
+}
+main section.aboutMe article.aboutMe-article {
+  width: 50%;
+  margin-right: 10%;
+}
+main section.aboutMe article.aboutMe-article h2 {
+  border-bottom: 2px solid #1b599b;
+  padding-bottom: 10px;
+}
+main section.aboutMe article.aboutMe-article p {
+  margin-block: 12px;
+}
+main section.aboutMe div.aboutMe-MyPIC {
+  width: 40%;
+  align-self: center;
+}
+main section.aboutMe div.aboutMe-MyPIC img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.8/1;
+  border-radius: 30px;
+}
+main section.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.skills h2 {
+  width: 40%;
+}
+main section.skills .skills-title {
+  width: 40%;
+}
+main section.skills .skills-title h3 {
+  margin: 10px;
+  color: #158bb3;
+}
+main section.skills .skills-title ul {
+  margin-left: 15px;
+}
+main section.skills .skills-title ul il {
+  display: block;
+  margin: 3px;
+}
+main .schedule div.schedule-daily {
+  margin-top: 50px;
+}
+main .schedule div.schedule-daily img {
+  width: 100%;
+  vertical-align: bottom;
+}
+main .schedule h3 {
+  color: #158bb3;
+  margin-block: 20px;
+  font-size: 30px;
+}
+main .schedule .schedule-graph {
+  display: flex;
+}
+main .schedule .schedule-graph div.circle {
+  width: 65%;
+  height: 500px;
+}
+main .schedule .schedule-graph div.graph-explain {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 35%;
+}
+main .schedule .schedule-graph div.graph-explain p {
+  display: inline-block;
+  margin: auto;
+  padding: 10px 20px;
+  border: 5px solid #1b599b;
+}
+main section.myStory h2 {
+  font-size: 4vw;
+  padding-bottom: 20px;
+}
+main section.myStory h3 {
+  font-size: 1.5rem;
+  color: #158bb3;
+  margin-top: 20px;
+}
+main section.myStory h4 {
+  margin-top: 10px;
+}
+main section.myStory p {
+  display: inline-block;
+  margin-top: 10px;
+  color: #333333;
+}
+main section.synology h2 {
+  text-align: center;
+}
+main section.synology h3 {
+  font-size: 1.5rem;
+  color: #158bb3;
+  margin-top: 20px;
+}
+main section.synology h4 {
+  font-size: 1.2rem;
+  color: #209dc7;
+}
+main section.synology h3 + p {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  margin-block: 10px;
+}
+main section.synology div.synology-product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 20px;
+}
+main section.synology div.synology-product div.product-text {
+  width: 40%;
+}
+main section.synology div.synology-product div.nas-img {
+  width: 40%;
+}
+main section.synology div.synology-product div.nas-img img {
+  width: 100%;
+  vertical-align: bottom;
+}
+main section.synology div.synology-product div.c2 {
+  width: 40%;
+}
+main section.synology div.synology-product div.c2 img {
+  width: 100%;
+  vertical-align: bottom;
+}
+main section.profileEx h2 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+main section.profileEx .profile-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 100px;
+}
+main section.profileEx .profile-text h3 {
+  color: #209dc7;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+main section.profileEx .profile-text p {
+  padding-left: 5px;
+}
+main section.profileEx .profile-text:nth-child(2) {
+  flex-direction: row-reverse;
+}
+main section.profileEx .profile-text div.canva-img {
+  width: 40%;
+}
+main section.profileEx .profile-text div.canva-img img {
+  width: 80%;
+  vertical-align: bottom;
+  border-radius: 30px;
+}
+main section.profileEx .profile-text div.canva-text {
+  width: 50%;
+}
+main section.profileEx .profile-text div.googleChart-img {
+  width: 40%;
+}
+main section.profileEx .profile-text div.googleChart-img img {
+  width: 100%;
+  vertical-align: bottom;
+}
+main section.profileEx .profile-text div.googleChart-text {
+  width: 50%;
+}
+main section.toWeHelp h2 {
+  margin-bottom: 30px;
+}
+main section.toWeHelp p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+footer.personal-link {
+  width: calc(100vw - 15px);
+  background-color: #1b599b;
+  text-align: center;
+}
+footer.personal-link h2 {
+  color: white;
+  padding-bottom: 50px;
+}
+footer.personal-link div.link-email {
+  padding-bottom: 20px;
+}
+footer.personal-link div.link-email p {
+  color: white;
+}
+footer.personal-link div.link-socialMeida {
+  margin-top: 50px;
+}
+footer.personal-link div.link-socialMeida p {
+  color: white;
+  font-weight: 800;
+}
+footer.personal-link div.link-socialMeida div.icons {
+  display: flex;
+  justify-content: center;
+}
+footer.personal-link div.link-socialMeida div.icons a {
+  width: 3vw;
+  vertical-align: bottom;
+  margin: 10px 5px;
+}
+footer.personal-link div.link-socialMeida div.icons a img {
+  width: 100%;
+  vertical-align: bottom;
+}/*# sourceMappingURL=style.css.map */

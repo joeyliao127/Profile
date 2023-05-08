@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joey's Profile</title>
+    <link rel="stylesheet" href="Style/style.css" />
+    <link rel="icon" href="IMG/aqau-box.png" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["HTML/CSS/RWD", 10],
+          ["Python/JavaScript", 10],
+          ["Flask/MySQL", 20],
+          ["會員系統開發", 30],
+          ["AJAX&後端API", 30],
+        ]);
+
+        var options1 = {
+          title: "第一階段訓練",
+          pieHole: 0.4,
+          colors: ["#72F2F2", "#43CAD9", "#3097BF", "#2E5F99", "#343D73"],
+        };
+        var data2 = google.visualization.arrayToDataTable([
+          ["Task", "%"],
+          ["SQL設計&AWS服務", 2],
+          ["景點API&網站首頁", 1],
+          ["景點頁面/網頁動態效果", 2],
+          ["會員功能整合", 3],
+          ["預定功能整合", 1],
+          ["金流串接", 2],
+          ["系統優化", 1],
+          ["多人協作", 1],
+        ]);
+
+        var options2 = {
+          title: "第二階段訓練",
+          pieHole: 0.4,
+          colors: [
+            "#72F2F2",
+            "#43CAD9",
+            "#3097BF",
+            "#2E5F99",
+            "#343D73",
+            "#A66C99",
+            "#D790AB",
+            "#FCB9BE",
+          ],
+        };
+        var data3 = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["Final Project", 50],
+          ["LeetCode", 10],
+          ["Docker&AWS", 30],
+          ["資料結構與演算法", 10],
+        ]);
+
+        var options3 = {
+          title: "第三階段訓練",
+          pieHole: 0.4,
+          colors: ["#72F2F2", "#43CAD9", "#3097BF", "#2E5F99"],
+        };
+
+        //讀取id
+        var chart1 = new google.visualization.PieChart(
+          document.getElementById("donutchart1")
+        );
+        var chart2 = new google.visualization.PieChart(
+          document.getElementById("donutchart2")
+        );
+        var chart3 = new google.visualization.PieChart(
+          document.getElementById("donutchart3")
+        );
+        chart1.draw(data1, options1);
+        chart2.draw(data2, options2);
+        chart3.draw(data3, options3);
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header-wrap">
+      <section class="header">
+        <div class="profileBar">
+          <p>Joey's Profile</p>
+        </div>
+        <div class="profileBar">
+          <nav class="introBar">
+            <a href="#skills">Skills</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#synology">Target</a>
+            <a href="#wehelp">Wehelp</a>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- 第一部分：JOEY LIAO -->
+      <div class="wrap-gray">
+        <section class="container firstPage">
+          <!-- 首頁-我的照片 -->
+          <div class="firstPage-PIC">
+            <img src="IMG/Joey首頁.jpeg" />
+          </div>
+          <!-- 首頁-名稱＆Full Stack Developer -->
+          <div class="firstPage-title">
+            <h1>JOEY LIAO</h1>
+            <p>I WILL BE A <span>FULL STACK DEVELOPER</span></p>
+            <a href="#aboutMe-title">About Me</a>
+          </div>
+        </section>
+      </div>
+      <!-- 第二部分: About-ME -->
+      <div class="wrap-white">
+        <section class="container aboutMe">
+          <article class="aboutMe-article">
+            <h2 id="aboutMe-title">About Me</h2>
+            <p>
+              我是Joey，中文名叫廖致皓，今年25歲，畢業於龍華科大資工系，未來必定成為一位Full
+              Stack
+              developer，說不上是coding的狂熱份子，但對於寫code有一定的興趣，目前在外商公司擔任IT的職位，工作中善於拆解問題與解決問題。
+            </p>
+            <p>
+              在朋友口中的自己，是一位積極、自律、有目標且行動力極強的人。
+              在我心中的自己，是一位喜歡思考且善於傾聽自我內心想法的人，隨順著心中的熱愛，享受著追求目標的過程。
+            </p>
+            <p>
+              未來計畫從後端工程師開始，熟悉後朝著全端軟體工程師的目標前進！
+            </p>
+          </article>
+          <div class="aboutMe-MyPIC">
+            <img src="IMG/Joey-aboutMe.jpg" />
+          </div>
+        </section>
+      </div>
+      <!-- 第三部分：為了成為軟體工程師... -->
+      <div class="wrap-gray">
+        <section class="container skills">
+          <h2 id="skills">為了成為軟體工程師 我努力過...</h2>
+          <div class="skills-title">
+            <!-- Udmey線上課程，目前已學習 -->
+            <h3>Udmey線上課程，目前已學習</h3>
+            <ul>
+              <il>HTML5</il>
+              <il>基本Python語法 </il>
+              <il>MySQL</il>
+              <il>Flask</il>
+              <il>Git/Github</il>
+            </ul>
+            <!-- 學習如何學習 -->
+            <h3>學習如何學習</h3>
+            <ul>
+              <il>運用X-mind心智圖釐清架構</il>
+              <il>運用番茄鐘紀錄學習所花費的時間</il>
+              <il>運用Obsidain關聯式筆記本寫筆記</il>
+              <il>善用大腦工作模式幫助學習</il>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- 第四部分：如何安排學習時間 -->
+      <div class="wrap-white">
+        <section class="container schedule">
+          <h2 id="schedule">如何安排學習時間?</h2>
+          <div class="schedule-daily">
+            <h3>每日時間表</h3>
+            <img src="IMG/學習時間表.png" />
+          </div>
+          <!-- 三個圓環圖區域 -->
+          <h3>階段性權重分佈</h3>
+          <div class="schedule-graph">
+            <div class="circle" id="donutchart1"></div>
+            <div class="graph-explain">
+              <p>
+                由於HTML, CSS, JS,
+                Python已經有基本認識，所以打算把時間著重在Flask和SQL的部分，剩餘的時間都分配給專案開發，和相較不熟的Ajax。
+              </p>
+            </div>
+          </div>
+          <div class="schedule-graph">
+            <div class="circle" id="donutchart2"></div>
+            <div class="graph-explain">
+              <p>第二階段想專門著重於SQL設計&AWS的服務，儘早熟悉後端技術。</p>
+            </div>
+          </div>
+          <div class="schedule-graph">
+            <div class="circle" id="donutchart3"></div>
+            <div class="graph-explain">
+              <p>
+                第三階段大多時間會著重在最終專案，部分時間補齊CS知識＆刷題，因為理想的公司面試時會考，剩餘的時間就分配給AWS和Docker容器技術。
+              </p>
+            </div>
+          </div>
+
+          <!-- 魚骨圖區域 -->
+        </section>
+      </div>
+
+      <!-- 第五部分：產生負面情緒事件 -->
+      <div class="wrap-gray">
+        <section class="container myStory">
+          <h2>產生負面情緒的事件與情緒處理</h2>
+          <article class="myStory-article">
+            <div class="myStory-event">
+              <h3>事件</h3>
+              <p>
+                在某次課堂中，我交出老師規定的作業，並等待老師幫我code
+                review。這份作業是我花費了許多心思，耗時24小時才完成的小專案，當時的我相當有信心能得到老師的表揚。
+              </p>
+              <p>
+                當老師幫我code
+                review時，點出了許多問題，在某些問題上以非常糟糕來形容，在二三十人的課堂裡被當眾點出問題，並得到如此的評價，當時的我除了感到挫折，也感到滿滿的羞愧，也因此沮喪了一整天。
+              </p>
+            </div>
+            <div class="emo">
+              <h3>情緒處理</h3>
+              <p>
+                由於平時有冥想的習慣，當下的我很快就意識到自身情緒的變化，從期待逐漸變成失落，我努力讓自己保持專注在發現問題與如何解決問題的重點上，時刻提醒自己code
+                review的本質是為了讓自己更進步。
+              </p>
+              <p>
+                檢討後，我將老師點出的問題整理在筆記本，並開始思考為何會出現這樣的情緒，我發現以下兩點問題：
+              </p>
+              <h4>害怕被他人嘲笑</h4>
+              <p>
+                經過思考後，發現真正在乎評價的只有自己，同學並不會老師給予我的評價而貶低自己，我相信大多數人只會當成借鑑，並不會有其他想法，況且他人對我的評價並不會影響到我想進步的心，因此害怕被他人嘲笑的想法很快就釋懷了。
+              </p>
+              <h4>期望轉變為失望</h4>
+              <p>
+                原本預期老師給予的評價是讚揚，結果卻被點出許多問題，於是我開始思考，從提升coding能力的角度出發，負評所造成的失落感，是否會對進步的本質產生影響，答案當然是否定的，我只需要專注於解決問題即可，因為問題才是真正影響我進步的關鍵。
+              </p>
+              <p>
+                另外我發現失落的情緒是自己選擇的，我也可以用愉快的心情面對，因為發現了問題，也可以用失落的心情，接受負面的評價，想通後逐漸走出了失落的心情。
+              </p>
+              <h3>回歸問題的本質</h3>
+              <p>
+                透過這次的事情，讓我更了解自己在乎的感受，也了解事情專注於本值即可，不要讓情緒影響到自己的行動，最後我用運動的方式，將最後所剩無幾的負面情緒排解乾淨，讓自己的心回歸穩定的狀態，順利地解決失落的情緒。
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <!-- 第六部分：理想中的公司 -->
+      <div class="wrap-white">
+        <section class="container synology">
+          <h2 id="synology">理想中的公司</h2>
+          <!-- 群暉Synology -->
+          <div class="synology-company">
+            <h3>群暉Synology</h3>
+            <p>理想中的工作職位是群暉的Product Developer，原因有以下幾點：</p>
+          </div>
+          <!-- DS1821+圖片區 -->
+          <div class="synology-product">
+            <div class="product-text">
+              <h4>擁有自己的產品</h4>
+              <p>
+                相較於接案公司，更想加入有自己產品的公司，能夠學習到產品開發的相關技術，還能學到如何團隊協作。
+              </p>
+            </div>
+            <div class="nas-img">
+              <img src="IMG/DS1821.jpeg" alt="DS1821" />
+            </div>
+          </div>
+          <div class="synology-product">
+            <div class="c2">
+              <img src="IMG/群暉C2.png" alt="Sonology C2" />
+            </div>
+            <div class="product-text">
+              <h4>雲端技術開發</h4>
+              <p>
+                除了Nas，群暉也開發自己的雲端技術，個人認雲平端技術是未來架站的主流解決方案，學習雲端開發對於職涯發展有幫助。
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 第七部分：自介開發心得 -->
+      <div class="wrap-gray">
+        <section class="container profileEx">
+          <h2>自介網頁開發心得分享</h2>
+          <!-- canva -->
+
+          <div class="profileEx-canva profile-text">
+            <div class="canva-img">
+              <img src="IMG/canva.png" />
+            </div>
+            <div class="canva-text">
+              <h3>外觀設計</h3>
+              <p>
+                由於完全沒有接觸過設計，只能大量參考他人的網站，統整出自己的設計邏輯。
+                想呈現出的網站氛圍是一種沈穩且專業的感覺，因此選了#1B599B深藍色作為標題，以#41B8D5當作輔色使用在小標題上，最後使用Canva將網站的外觀設計好，最終透過HTML
+                & CSS呈現在網頁上。
+              </p>
+            </div>
+          </div>
+          <!-- google chart -->
+          <div class="profileEx-GoogleChart profile-text">
+            <div class="googleChart-img">
+              <img src="IMG/google-chart-logo.png" />
+            </div>
+            <div class="googleChart-text">
+              <h3>Google Chart</h3>
+              <p>
+                由於HTML和CSS是我較擅長的技術，因此在撰寫時並沒有遇到過於困難的地方，只有圓環圖是第一次使用，最後選用google
+                chart來產生圓環圖，參數設定很直觀，調整function中的數字即可，但沒有深入研究。
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 第八部分：我想對WeHelp説 -->
+      <div class="wrap-white">
+        <section class="container toWeHelp">
+          <h2 id="wehelp">最後我想跟WeHelp説</h2>
+          <p>
+            約莫去年就有了從IT轉職為軟體工程師的想法，雖然就讀資工系，但大學期間並沒有明確的目標，因此對於程式語言或是CS相關背景知識並沒有深入了解。在104查過業界所用的技術後，才深知自己在專業部分的不足，也預計花上一年左右的時間重新熟悉程式語言與CS知識。
+          </p>
+          <p>
+            在去年九月找到了WeHelp，決定要報名第四屆軟體工程師扶持計畫，並在培訓開始前，學習可能會用到的技能，我清楚培訓過程中將面對繁重的作業，也清楚想要畢業並不是件容易的事，為了參加培訓營，今年四月和公司提了離職，做到6/30，從今年一月開始，平均每天花費三個小時以上的時間進修，為了適應未來半年高強度的學習，也是為了轉職前能夠學到更多技能，我承諾一週花費60個小時以上的時間學習，全心投入訓練營，我想我已經準備好了，希望老師們能感受到我的決心。
+          </p>
+          <p>
+            最後，選擇wehelp除了學習軟體工程師所需的技能，也嚮往能夠找到一群志同道合的夥伴一起為了教育努力，希望未來進入業界後，能成為WeHelp助教的身份，一起幫助想追求夢想的夥伴。
+          </p>
+        </section>
+      </div>
+    </main>
+    <!-- 第九部分：個人連結區 -->
+    <footer class="personal-link">
+      <div class="wrap-blue container">
+        <h2>Reach Out</h2>
+        <div class="link-email">
+          <p>廖致皓 Joey Liao</p>
+          <p>joey01271998@gmail.com</p>
+        </div>
+        <div class="link-socialMeida">
+          <p>CONTACT ME</p>
+          <div class="icons">
+            <a href="https://www.instagram.com/jr.hao127/">
+              <img src="icon/icons8-instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100004152453737">
+              <img src="icon/icons8-facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://github.com/joeyliao127/">
+              <img src="icon/icons8-github.svg" alt="Github" />
+            </a>
+            <a href="https://www.linkedin.com/in/joey-liao-053365238/">
+              <img src="icon/icons8-linkedin.svg" alt="Linkedin" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
